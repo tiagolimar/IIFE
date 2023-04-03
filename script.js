@@ -3,6 +3,7 @@ let total_score = 0;
 let questions = document.querySelectorAll('.question');
 let question_active = document.querySelector('.active');
 let item_active = document.querySelector('.active-item');
+let result = document.querySelector('.result');
 
 function active_question(){
     id_question = event.target.getAttribute('value');
@@ -21,6 +22,21 @@ function update_total_score(){
     for (score of scores){
         total_score += +score;
     }
+
+    if(!scores.includes(-1)){
+        if (0 < total_score && total_score < 5){
+            result.innerHTML = 'Impossível de interpretar';
+        }else if (4 < total_score && total_score < 11){
+            result.innerHTML = 'Disfunção erétil grave';
+        }else if (12 < total_score && total_score < 16){
+            result.innerHTML = 'Disfunção erétil moderada';
+        }else if (17 < total_score && total_score < 21){
+            result.innerHTML = 'Disfunção erétil leve';
+        }else{
+            result.innerHTML = 'Função erétil normal';
+        }
+    }
+
 }
 
 function update_score(){
@@ -29,12 +45,20 @@ function update_score(){
     value = event.target.getAttribute('value');
 
     scores[indice_question] = value;
-    console.log(`div[value=${id_item}]`);
+
     progress_item = document.querySelector(`div[value=${id_item}]`);
     progress_item.classList.remove('gray');
     progress_item.classList.add('green');
 
     update_total_score();
+}
+
+function show_result(){
+    if (result.classList.contains('hidden')){
+        result.classList.remove('hidden');
+    }else{
+        result.classList.add('hidden');
+    }
 }
 
 function create_scores(){
@@ -44,14 +68,4 @@ function create_scores(){
     }
 }
 
-function show_result(){
-    if (total_score > 0){
-
-    }
-}
-
-function init(){
-    create_scores();
-}
-
-init();
+create_scores();

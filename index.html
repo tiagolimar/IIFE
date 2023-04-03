@@ -8,163 +8,37 @@
     <title>IIFE</title>
 </head>
 <body>
-    <h1 class="result hidden">Responda a todas as questões</h1>
-    <ul class="questionario">
-        <li id="q1" class="question active">
-            <p class="statement">I. Quanta certeza você tem de que pode ter uma ereção e de que consegue mantê-la?</p>
-            <div class="options">
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question1" id="q1-1" value="1">
-                    <label for="q1-1">Não muita certeza</label></label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question1" id="q1-2" value="2">
-                    <label for="q1-2">Um pouco</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question1" id="q1-3" value="3">
-                    <label for="q1-3">Estou mais ou menos certo disso</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question1" id="q1-4" value="4">
-                    <label for="q1-4">Com bastante certeza</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question1" id="q1-5" value="5">
-                    <label for="q1-5">Estou completamente certo</label>
-                </div>
-            </div>
-        </li>
-        <li id="q2" class="question">
-            <p class="statement">II. Nos momentos em que você teve ereções após estímulos sexuais, com que frequência o seu pênis ficou suficientemente rígido (duro) para permitir a penetração?</p>
-            <div class="options">
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question2" id="q2-0" value="0">
-                    <label for="q2-0">Não pude ter relações sexuais</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question2" id="q2-1" value="1">
-                    <label for="q2-1">Quase nunca ou nunca</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question2" id="q2-2" value="2">
-                    <label for="q2-2">Raramente (pouquíssimas vezes, considerando todas que já aconteceram)</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question2" id="q2-3" value="3">
-                    <label for="q2-3">Às vezes (mais ou menos na metade das vezes)</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question2" id="q2-4" value="4">
-                    <label for="q2-4">Na maior parte das vezes</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question2" id="q2-5" value="5">
-                    <label for="q2-5">Quase todas as vezes ou todas as vezes</label>
-                </div>
-            </div>
-        </li>
-        <li id="q3" class="question">
-            <p class="statement">III. Quando teve relações sexuais, com que frequência conseguiu manter o pênis ereto após penetrar a sua parceira ou parceiro?</p>
-            <div class="options">
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question3" id="q3-0" value="0">
-                    <label for="q3-0">Não pude ter relações sexuais</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question3" id="q3-1" value="1">
-                    <label for="q3-1">Quase nunca ou nunca</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question3" id="q3-2" value="2">
-                    <label for="q3-2">Raramente (pouquíssimas vezes, considerando todas que já aconteceram)</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question3" id="q3-3" value="3">
-                    <label for="q3-3">Às vezes (mais ou menos na metade das vezes)</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question3" id="q3-4" value="4">
-                    <label for="q3-4">Na maior parte das vezes</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question3" id="q3-5" value="5">
-                    <label for="q3-5">Quase todas as vezes ou todas as vezes</label>
-                </div>
-            </div>
-        </li>
-        <li id="q4" class="question">
-            <p class="statement">IV. Durante a relação, quão difícil foi para você manter uma ereção até ao fim do sexo?</p>
-            <div class="options">
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question4" id="q4-0" value="0">
-                    <label for="q4-0">Não pude ter relações sexuais</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question4" id="q4-1" value="1">
-                    <label for="q4-1">Extremamente difícil</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question4" id="q4-2" value="2">
-                    <label for="q4-2">Muito difícil</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question4" id="q4-3" value="3">
-                    <label for="q4-3">Difícil</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question4" id="q4-4" value="4">
-                    <label for="q4-4">Um pouco difícil</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question4" id="q4-5" value="5">
-                    <label for="q4-5">Não foi difícil</label>
-                </div>
-            </div>
-        </li>
-        <li id="q5" class="question">
-            <p class="statement">V. Quando tentou fazer sexo, com que frequência ficou satisfeito com a relação?</p>
-            <div class="options">
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question5" id="q5-0" value="0">
-                    <label for="q5-0">Não pude ter relações sexuais</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question5" id="q5-1" value="1">
-                    <label for="q5-1">Quase nunca ou nunca</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question5" id="q5-2" value="2">
-                    <label for="q5-2">Raramente (pouquíssimas vezes, considerando todas que já aconteceram)</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question5" id="q5-3" value="3">
-                    <label for="q5-3">Às vezes (mais ou menos na metade das vezes)</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question5" id="q5-4" value="4">
-                    <label for="q5-4">Na maior parte das vezes</label>
-                </div>
-                <div class="line">
-                    <input type="radio" onclick="update_score()" name="question5" id="q5-5" value="5">
-                    <label for="q5-5">Quase todas as vezes ou todas as vezes</label>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <div class="progress-bar">
-        <div value="q1" onclick="active_question()" class="progress-item active-item"></div>
-        <div class="progress-divider"></div>
-        <div value="q2" onclick="active_question()" class="progress-item gray"></div>
-        <div class="progress-divider"></div>
-        <div value="q3" onclick="active_question()" class="progress-item gray"></div>
-        <div class="progress-divider"></div>
-        <div value="q4" onclick="active_question()" class="progress-item gray"></div>
-        <div class="progress-divider"></div>
-        <div value="q5" onclick="active_question()" class="progress-item gray"></div>
-    </div>
+    <h1 class="result">Índice Internacional de Função Erétil</h1>
+    <div class="resume">
+        <p>
+            O questionário IIEF-5 é utilizado por diversos profissionais da saúde 
+            pelo mundo sendo amplamente utilizado na Europa e nos Estados Unidos
+             e é usado para avaliar a função erétil em homens de maneira clara e precisa.
+        </p>
+        <p>
+            O questionário IIEF (International Index of Erectile Function), tem validação 
+            científica e foi traduzido para muitas línguas, na sua versão curta 
+            ele inclui cinco perguntas que permite saber se se trata de uma disfunção 
+            erétil leve, moderada ou grave ou se há uma função erétil normal.
+        </p>
+        <p>
+            Embora o questionário possa ajudar, ele não substitue uma avaliação médica,
+             mas oferece uma avaliação mais objetiva da gravidade dos sintomas.
+        </p>
 
-    <button class="btn" onclick="show_result">Mostrar resultado</button>
-    <script src="script.js"></script>
+        <p><i>Referências</i></p>
+        <a href="https://www.scielo.br/j/abc/a/76gkgKZBXwH8YBFktVy7rpf/?format=pdf&lang=pt" target="_blank" rel="noopener noreferrer">
+            Ana I. Gonzáles, Sabrina W. Sties, Priscilla G. Wittkopf, Lourenço S. de Mara, 
+            Anderson Z. Ulbrich, Fernando L. Cardoso, T. de Carvalho. <b>Validação do Índice 
+            Internacional de Função Erétil (IIFE) para Uso no Brasil.</b>
+        </a>
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0090429597002380" target="_blank" rel="noopener noreferrer">
+            Raymond C. Rosen, Alan Riley, Gorm Wagner, Ian H. Osterloh, John Kirkpatrick, 
+            Avanish Mishra. <b>International index of erectile function (IIEF): classificação 
+            multidimensional de avaliação da disfunção erétil.</b>
+        </a>
+
+    </div>
+    <a class="btn" href="test.html" target="_blank">Ir ao teste</button>
 </body>
 </html>
