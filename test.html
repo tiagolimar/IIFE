@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Teste - IIFE5</title>
+    <title>Teste - IIFE-5</title>
 </head>
 <body>
     <h1 class="result hidden">Responda a todas as questões</h1>
@@ -163,8 +163,12 @@
         <div class="progress-divider"></div>
         <div value="q5" onclick="active_question()" class="progress-item gray"></div>
     </div>
-
-    <button class="btn" onclick="show_result()">Mostrar resultado</button>
+    <div class="buttons">
+        
+        <button class="btn back hidden" onclick="active_before_question()"><</button>
+        <button id="btn-mor" class="btn hidden" onclick="show_result()">Mostrar resultado</button>
+        <button class="btn next" onclick="active_next_question()">></button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
